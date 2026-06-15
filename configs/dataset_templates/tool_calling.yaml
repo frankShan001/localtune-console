@@ -1,0 +1,8 @@
+task_type: tool_calling
+format: messages
+description: "Tool/function calling data with messages and assistant tool_calls."
+required_fields:
+  - messages
+quality:
+  min_input_chars: 1
+  min_output_chars: 1

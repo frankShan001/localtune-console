@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  release-check:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+      - name: Verify Python lock file
+        run: uv lock --check
+      - name: Verify clean Python install plan
+        run: uv sync --locked --dry-run
+      - name: Install Python dependencies
+        run: uv sync --locked
+      - name: Install frontend dependencies
+        run: npm --prefix frontend ci
+      - name: Audit frontend production dependencies
+        run: npm --prefix frontend audit --omit=dev --audit-level=high
+      - name: Run Python tests
+        run: uv run pytest -q
+      - name: Run frontend tests
+        run: npm --prefix frontend run test
+      - name: Build frontend
+        run: npm --prefix frontend run build
+      - name: Check Unix launcher
+        if: runner.os == 'Linux'
+        run: bash -n start_localtune.sh
+      - name: Run release checks
+        run: uv run python scripts/release_check.py --skip-data --skip-tests --skip-frontend

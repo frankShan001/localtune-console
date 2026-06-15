@@ -1,0 +1,70 @@
+# Model weights and generated artifacts
+*.bin
+*.gguf
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+/models/
+/checkpoints/
+/outputs/
+/runs/
+/wandb/
+
+# Runtime files
+/logs/
+*.log
+/configs/runtime/
+/configs/model_config.yaml
+.env
+
+# Local datasets
+/data/*
+*.jsonl
+!/examples/
+!/examples/corpus/
+!/examples/corpus/*.jsonl
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.pytest-tmp/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+dist/
+build/
+
+# Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Local caches
+.cache/
+.modelscope/
+.npm-cache/
+.uv-cache/
+.tmp/
+
+# Local tool/workspace state
+.codegraph/
+.codebuddy/
+.workbuddy/
+/history-backup/
+
+# IDE and OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+.venv/
+env/
+venv/

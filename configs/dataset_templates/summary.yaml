@@ -1,0 +1,9 @@
+task_type: summary
+format: document_summary
+description: "Summarization data: long document to shorter summary."
+required_fields:
+  - document
+  - summary
+quality:
+  min_input_chars: 40
+  min_output_chars: 10

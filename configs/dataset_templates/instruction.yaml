@@ -1,0 +1,9 @@
+task_type: instruction
+format: alpaca
+description: "General instruction tuning: instruction/input/output or user/assistant pairs."
+required_fields:
+  - instruction
+  - output
+quality:
+  min_input_chars: 4
+  min_output_chars: 10

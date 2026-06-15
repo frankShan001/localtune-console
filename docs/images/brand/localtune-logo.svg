@@ -1,0 +1,30 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">LocalTune Console logo</title>
+  <desc id="desc">A neon tuning core mark for LocalTune Console.</desc>
+  <defs>
+    <linearGradient id="shell" x1="96" y1="76" x2="416" y2="436" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2EE7D1"/>
+      <stop offset="0.52" stop-color="#23B9E8"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="inner" x1="164" y1="142" x2="364" y2="370" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#061B1D"/>
+      <stop offset="1" stop-color="#0B1020"/>
+    </linearGradient>
+    <filter id="glow" x="42" y="42" width="428" height="428" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.12 0 0 0 0 0.85 0 0 0 0 0.78 0 0 0 0.5 0"/>
+      <feBlend in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#061012"/>
+  <path opacity="0.25" d="M72 160H440M72 256H440M72 352H440M160 72V440M256 72V440M352 72V440" stroke="#1B3D42" stroke-width="2"/>
+  <g filter="url(#glow)">
+    <path d="M256 82L408 170V346L256 434L104 346V170L256 82Z" fill="url(#shell)"/>
+    <path d="M256 126L370 192V324L256 390L142 324V192L256 126Z" fill="url(#inner)" stroke="#B9FFF6" stroke-width="10"/>
+    <path d="M256 154V256M256 256L168 307M256 256L344 307" stroke="#2EE7D1" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M168 205L256 154L344 205M168 307L168 205L256 256L344 205V307L256 358L168 307Z" stroke="#E8FFFB" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="256" cy="256" r="28" fill="#2EE7D1" stroke="#E8FFFB" stroke-width="10"/>
+    <path d="M128 128L84 128L84 188M384 128H428V188M128 384H84V324M384 384H428V324" stroke="#2EE7D1" stroke-width="16" stroke-linecap="round"/>
+  </g>
+</svg>

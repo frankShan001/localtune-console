@@ -1,0 +1,1 @@
+{"task_type":"dpo","prompt":"请简要说明训练前检查语料的意义。","chosen":"语料检查可以提前发现结构和内容问题，避免无效训练。","rejected":"因为检查一下通常会比较好。","metadata":{"id":"dpo-0001","split":"train"}}

@@ -1,0 +1,9 @@
+task_type: qa
+format: qa
+description: "Question answering over FAQs, manuals, or domain knowledge."
+required_fields:
+  - question
+  - answer
+quality:
+  min_input_chars: 4
+  min_output_chars: 6

@@ -1,0 +1,9 @@
+task_type: extraction
+format: text_json
+description: "Information extraction data: input text to structured JSON output."
+required_fields:
+  - text
+  - output
+quality:
+  min_input_chars: 10
+  min_output_chars: 2

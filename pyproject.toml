@@ -1,0 +1,45 @@
+[project]
+name = "localtune-console"
+version = "0.4.0"
+description = "Local-first LLM fine-tuning console for dataset validation, QLoRA training, monitoring, and adapter inference"
+readme = "README.md"
+requires-python = ">=3.12,<3.15"
+license = { text = "MIT" }
+authors = [
+    { name = "LocalTune Console contributors" },
+]
+keywords = ["llm", "fine-tuning", "qlora", "lora", "peft", "bitsandbytes", "dataset-validation"]
+dependencies = [
+    "torch>=2.5.0",
+    "accelerate>=1.13.0",
+    "hf-xet>=1.5.0",
+    "huggingface-hub>=1.14.0",
+    "safetensors>=0.7.0",
+    "transformers>=5.8.1",
+    "compressed-tensors>=0.2.0",
+    "peft>=0.14.0",
+    "trl>=0.9.0",
+    "datasets>=3.0.0",
+    "scipy>=1.13.0",
+    "pyyaml>=6.0",
+    "tqdm>=4.67.0",
+    "loguru>=0.7.0",
+    "wandb>=0.17.0",
+    "matplotlib>=3.9.0",
+    "flask>=3.0.0",
+    "psutil>=6.0.0",
+    "nodeenv>=1.10.0",
+    "click>=8.1.0",
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+cuda = ["bitsandbytes>=0.45.0"]
+modelscope = ["modelscope>=1.36.3"]
+unsloth = ["unsloth>=2025.5.0"]
+dev = ["pytest>=8.0.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-ra --basetemp=.pytest-tmp"

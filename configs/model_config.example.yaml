@@ -1,0 +1,91 @@
+# Copy this file to configs/model_config.yaml.
+# Add a local model directory and a Dataset Profile from the console before
+# starting training.
+
+project:
+  name: "localtune-console"
+  version: "0.4.0"
+  description: "Example configuration for local LLM QLoRA fine-tuning"
+
+quantization:
+  active_branch: "bnb4"
+  fallback_chain: ["bnb4"]
+  auto_detect: true
+  branches:
+    bnb4:
+      description: "PEFT + bitsandbytes NF4 QLoRA"
+      model_path: ""
+      framework: "peft"
+      load_mode: "bnb_qlora"
+      quant_type: "nf4"
+      supported_backends: ["cuda"]
+      load_in_4bit: true
+      bnb_config:
+        bnb_4bit_quant_type: "nf4"
+        bnb_4bit_use_double_quant: true
+        bnb_4bit_compute_dtype: "bfloat16"
+      vram_estimate_gb: 17.5
+
+model:
+  active_model: ""
+  name: ""
+  scan_dirs: []
+  torch_dtype: "bfloat16"
+  device_map: "auto"
+  trust_remote_code: true
+  models: {}
+  lora:
+    r: 16
+    lora_alpha: 32
+    lora_dropout: 0.05
+    bias: "none"
+    task_type: "CAUSAL_LM"
+    use_rslora: true
+    use_dora: false
+    target_modules: ["q_proj", "k_proj", "v_proj", "o_proj"]
+
+data:
+  raw_data_dir: "./data/raw"
+  cleaned_data_dir: "./data/cleaned"
+  processed_data_dir: "./data/processed"
+  dataset_format: "chatml"
+  task_type: "rewrite"
+  # Corpus profiles are created from the console after you add your own files.
+  profiles: {}
+  max_seq_length: 512
+  min_seq_length: 128
+
+training:
+  output_dir: "./outputs/localtune"
+  num_train_epochs: 3
+  per_device_train_batch_size: 1
+  per_device_eval_batch_size: 1
+  gradient_accumulation_steps: 16
+  # Safe first-run test run. Increase this explicitly for a real training run.
+  max_steps: 1
+  max_seq_length: 512
+  optimizer: "adamw_torch"
+  learning_rate: 1.0e-4
+  weight_decay: 0.01
+  warmup_steps: 100
+  lr_scheduler_type: "cosine"
+  gradient_checkpointing: true
+  gradient_checkpointing_kwargs:
+    use_reentrant: false
+  bf16: true
+  fp16: false
+  tf32: true
+  logging_steps: 10
+  save_steps: 500
+  eval_steps: 500
+  save_total_limit: 3
+  load_best_model_at_end: false
+  dataloader_num_workers: 0
+  dataloader_pin_memory: false
+
+evaluation:
+  enabled: true
+  do_eval: false
+
+monitoring:
+  dashboard_port: 6543

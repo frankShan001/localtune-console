@@ -1,0 +1,10 @@
+task_type: dpo
+format: preference
+description: "Preference data for DPO: prompt, chosen answer, rejected answer."
+required_fields:
+  - prompt
+  - chosen
+  - rejected
+quality:
+  min_input_chars: 4
+  min_output_chars: 4

@@ -1,0 +1,9 @@
+task_type: code
+format: instruction_code
+description: "Code tuning data: instruction to code answer."
+required_fields:
+  - instruction
+  - code
+quality:
+  min_input_chars: 4
+  min_output_chars: 10

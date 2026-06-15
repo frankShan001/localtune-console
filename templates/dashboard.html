@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LocalTune Console</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: Inter, "Segoe UI", "Microsoft YaHei", sans-serif;
+    }
+    body {
+      display: grid;
+      min-height: 100vh;
+      margin: 0;
+      place-items: center;
+      background: #f2f5f9;
+      color: #17233c;
+    }
+    main {
+      width: min(560px, calc(100% - 48px));
+      padding: 32px;
+      border: 1px solid #d8e0ec;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 12px 32px rgb(26 47 82 / 10%);
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 24px;
+    }
+    p {
+      margin: 8px 0;
+      color: #52647f;
+      line-height: 1.7;
+    }
+    code {
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: #edf2f8;
+      color: #173f83;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { background: #111827; color: #eef4ff; }
+      main { border-color: #344258; background: #1a2433; }
+      p { color: #b7c4d8; }
+      code { background: #26354a; color: #c9dcff; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>前端尚未构建</h1>
+    <p>请运行 <code>start_localtune.bat</code>，程序会安装前端依赖并完成构建。</p>
+    <p>The frontend has not been built. Run <code>start_localtune.bat</code> to prepare and launch LocalTune Console.</p>
+  </main>
+</body>
+</html>

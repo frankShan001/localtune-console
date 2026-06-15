@@ -1,0 +1,1 @@
+{"task_type":"instruction","instruction":"请给出三条减少无效会议的建议。","input":"面向一个每周会议较多的产品团队。","output":"提前发送议程；能异步同步的内容改用文档；为每场会议设置明确的决策目标。","metadata":{"id":"instruction-0001","domain":"workplace","split":"train"}}

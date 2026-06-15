@@ -1,0 +1,1 @@
+{"task_type":"tool_calling","messages":[{"role":"system","content":"You can call tools when needed."},{"role":"user","content":"Open the folder that contains the selected corpus file."},{"role":"assistant","content":"","tool_calls":[{"name":"open_folder","arguments":{"path":"data/processed/train.jsonl"}}]}],"metadata":{"id":"tool-0001","tool":"open_folder","split":"train"}}

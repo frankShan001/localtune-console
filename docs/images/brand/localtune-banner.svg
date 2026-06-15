@@ -1,0 +1,61 @@
+<svg width="1600" height="320" viewBox="0 0 1600 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">LocalTune Console banner</title>
+  <desc id="desc">Brand banner for LocalTune Console, a local LLM fine-tuning control center.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#061012"/>
+      <stop offset="0.55" stop-color="#07191B"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#2EE7D1"/>
+      <stop offset="1" stop-color="#23B9E8"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-30%" width="140%" height="160%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.12 0 0 0 0 0.85 0 0 0 0 0.78 0 0 0 0.45 0"/>
+      <feBlend in="SourceGraphic"/>
+    </filter>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0V56" stroke="#2EE7D1" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="320" rx="36" fill="url(#bg)"/>
+  <rect width="1600" height="320" rx="36" fill="url(#grid)"/>
+  <path d="M56 260C270 156 374 236 566 142C753 51 903 43 1120 120C1258 169 1382 153 1542 56" stroke="#2EE7D1" stroke-opacity="0.16" stroke-width="2"/>
+  <g transform="translate(84 58)" filter="url(#softGlow)">
+    <rect width="168" height="168" rx="42" fill="url(#cyan)"/>
+    <path d="M84 30L130 56V108L84 135L38 108V56L84 30Z" fill="#07191B"/>
+    <path d="M84 49V84M84 84L51 103M84 84L117 103" stroke="#2EE7D1" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M51 64L84 45L117 64M51 103V64L84 84L117 64V103L84 122L51 103Z" stroke="#F4FFFD" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="84" cy="84" r="11" fill="#2EE7D1" stroke="#F4FFFD" stroke-width="5"/>
+  </g>
+  <g transform="translate(292 72)">
+    <text x="0" y="56" fill="#F7FFFD" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="64" font-weight="800" letter-spacing="0">LocalTune Console</text>
+    <g transform="translate(0 112)" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">
+      <rect x="0" y="0" width="132" height="42" rx="21" fill="#102723" stroke="#2EE7D1" stroke-opacity="0.55"/>
+      <text x="22" y="27" fill="#8DFFF1">Local-first</text>
+      <rect x="148" y="0" width="114" height="42" rx="21" fill="#132232" stroke="#23B9E8" stroke-opacity="0.48"/>
+      <text x="172" y="27" fill="#9EEBFF">QLoRA</text>
+      <rect x="278" y="0" width="164" height="42" rx="21" fill="#171D2D" stroke="#8B5CF6" stroke-opacity="0.42"/>
+      <text x="302" y="27" fill="#D6C8FF">Model-aware</text>
+      <rect x="458" y="0" width="178" height="42" rx="21" fill="#102723" stroke="#2EE7D1" stroke-opacity="0.42"/>
+      <text x="482" y="27" fill="#D9FFFA">Training visibility</text>
+    </g>
+  </g>
+  <g transform="translate(1080 28)">
+    <rect x="0" y="0" width="388" height="264" rx="28" fill="#0B1517" stroke="#25494D"/>
+    <rect x="28" y="34" width="160" height="50" rx="14" fill="#102723" stroke="#2EE7D1" stroke-opacity="0.55"/>
+    <text x="50" y="66" fill="#EFFFFB" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Base Model</text>
+    <rect x="204" y="34" width="154" height="50" rx="14" fill="#101923" stroke="#23B9E8" stroke-opacity="0.45"/>
+    <text x="232" y="66" fill="#EFFFFB" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Dataset</text>
+    <path d="M96 122C148 78 201 161 252 112C278 88 304 86 334 106" stroke="#2EE7D1" stroke-width="7" stroke-linecap="round"/>
+    <path d="M52 196H336" stroke="#263D42" stroke-width="2"/>
+    <path d="M72 211L104 179L143 194L182 146L225 162L274 124L322 137" stroke="#23B9E8" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="52" y="220" width="108" height="24" rx="12" fill="#153B35"/>
+    <rect x="176" y="220" width="76" height="24" rx="12" fill="#173044"/>
+    <rect x="268" y="220" width="58" height="24" rx="12" fill="#261E3B"/>
+    <path d="M-28 132H-88" stroke="#2EE7D1" stroke-width="3" stroke-linecap="round"/>
+    <path d="M428 132H488" stroke="#23B9E8" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

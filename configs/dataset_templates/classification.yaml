@@ -1,0 +1,9 @@
+task_type: classification
+format: text_label
+description: "Classification data: input text to a fixed label."
+required_fields:
+  - text
+  - label
+quality:
+  min_input_chars: 2
+  min_output_chars: 1

@@ -1,0 +1,8 @@
+task_type: chat
+format: messages
+description: "Multi-turn chat tuning with OpenAI/ShareGPT-style messages."
+required_fields:
+  - messages
+quality:
+  min_input_chars: 1
+  min_output_chars: 1

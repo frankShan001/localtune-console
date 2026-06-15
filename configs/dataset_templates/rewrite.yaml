@@ -1,0 +1,10 @@
+task_type: rewrite
+format: source_target
+description: "Rewrite, polish, or style-transfer data: source text to target text."
+required_fields:
+  - source
+  - target
+quality:
+  min_source_chars: 10
+  min_target_chars: 20
+  max_length_ratio: 8
