@@ -30,13 +30,13 @@ jobs:
       - name: Verify clean Python install plan
         run: uv sync --locked --dry-run
       - name: Install Python dependencies
-        run: uv sync --locked
+        run: uv sync --locked --extra dev
       - name: Install frontend dependencies
         run: npm --prefix frontend ci
       - name: Audit frontend production dependencies
         run: npm --prefix frontend audit --omit=dev --audit-level=high
       - name: Run Python tests
-        run: uv run pytest -q
+        run: uv run --extra dev pytest -q
       - name: Run frontend tests
         run: npm --prefix frontend run test
       - name: Build frontend
